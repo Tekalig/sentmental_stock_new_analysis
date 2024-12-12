@@ -49,4 +49,4 @@ class StockNewsScraper:
     # Function to save the collected data to a CSV file
     def save_to_csv(self, filename='stock_news.csv'):
         df = pd.DataFrame(self.all_news_data, columns=['Ticker', 'Date', 'Time', 'Headline'])
-        df.to_csv(filename, index=False, encoding='utf-8')
+        df.to_csv("data/" + filename, index=False, encoding='utf-8')
